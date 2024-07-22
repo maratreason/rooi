@@ -1,1 +1,1 @@
-export * from "./lib/feature-users-list.module";
+export * from "./lib/users-list/users-list.component";
