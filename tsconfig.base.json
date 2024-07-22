@@ -17,7 +17,10 @@
     "paths": {
       "@core/http": ["libs/core/http/src/index.ts"],
       "@core/utils": ["libs/core/utils/src/index.ts"],
-      "@rooi/data-access": ["libs/rooi/users/data-access/src/index.ts"]
+      "@rooi/data-access": ["libs/rooi/users/data-access/src/index.ts"],
+      "@rooi/feature-users-list": [
+        "libs/rooi/users/feature-users-list/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
