@@ -3,9 +3,8 @@ import {provideRouter} from "@angular/router";
 import {appRoutes} from "./app.routes";
 import {provideStore, provideState} from "@ngrx/store";
 import {provideEffects} from "@ngrx/effects";
-import * as fromUsers from "../../../../libs/rooi/users/data-access/src/lib/+state/users.reducer";
-import {UsersEffects} from "../../../../libs/rooi/users/data-access/src/lib/+state/users.effects";
-import {UsersFacade} from "../../../../libs/rooi/users/data-access/src/lib/+state/users.facade";
+import * as fromUsers from "@rooi/data-access";
+import {UsersEffects, UsersFacade} from "@rooi/data-access";
 
 export const appConfig: ApplicationConfig = {
   providers: [
