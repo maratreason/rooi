@@ -1,21 +1,35 @@
-import {Injectable, inject} from "@angular/core";
+import {inject} from "@angular/core";
 import {createEffect, Actions, ofType} from "@ngrx/effects";
-import {switchMap, catchError, of} from "rxjs";
+import {switchMap, catchError, of, map} from "rxjs";
 import * as UsersActions from "./users.actions";
 import * as UsersFeature from "./users.reducer";
+import {ApiService} from "@core/http";
+import {UsersDTO} from "../users-dto.model";
+import {usersDTOAdapter} from "../users-dto.adapter";
 
-@Injectable()
-export class UsersEffects {
-  private actions$ = inject(Actions);
+export const usersEffects = createEffect(
+  () => {
+    const actions$ = inject(Actions);
+    const apiService = inject(ApiService);
 
-  init$ = createEffect(() =>
-    this.actions$.pipe(
+    actions$.subscribe(console.log);
+
+    return actions$.pipe(
       ofType(UsersActions.initUsers),
-      switchMap(() => of(UsersActions.loadUsersSuccess({users: []}))),
-      catchError((error) => {
-        console.error("Error", error);
-        return of(UsersActions.loadUsersFailure({error}));
-      })
-    )
-  );
-}
+      switchMap(() =>
+        apiService.get<UsersDTO[]>("/users").pipe(
+          map((users) =>
+            UsersActions.loadUsersSuccess({
+              users: users.map((user) => usersDTOAdapter.DTOtoEntity(user)),
+            })
+          ),
+          catchError((error) => {
+            console.error("Error", error);
+            return of(UsersActions.loadUsersFailure({error}));
+          })
+        )
+      )
+    );
+  },
+  {functional: true}
+);
