@@ -13,7 +13,7 @@ export class UsersFacade {
    * Combine pieces of state using createSelector,
    * and expose them as observables through the facade.
    */
-  loaded$ = this.store.pipe(select(UsersSelectors.selectUsersLoaded));
+  loaded$ = this.store.pipe(select(UsersSelectors.selectUsersStatus));
   allUsers$ = this.store.pipe(select(UsersSelectors.selectAllUsers));
   selectedUsers$ = this.store.pipe(select(UsersSelectors.selectEntity));
 

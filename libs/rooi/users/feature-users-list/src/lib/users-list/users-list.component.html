@@ -1,1 +1,5 @@
-<p>users-list works!</p>
+<div style="margin: 5px; border: 1px solid #ccc">
+  <ng-container *ngIf="$users | async as users">
+    {{users | json}}
+  </ng-container>
+</div>

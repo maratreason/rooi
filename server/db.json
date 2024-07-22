@@ -13,6 +13,13 @@
       "password": "user",
       "name": "user",
       "email": "user@mail.ru"
+    },
+    {
+      "id": 3,
+      "login": "user2",
+      "password": "user2",
+      "name": "user2",
+      "email": "user2@mail.ru"
     }
   ]
 }

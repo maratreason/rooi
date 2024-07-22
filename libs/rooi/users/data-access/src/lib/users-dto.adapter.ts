@@ -3,7 +3,7 @@ import {UsersDTO} from "./users-dto.model";
 
 export type UsersDTOAdapter = {
   DTOtoEntity(dto: UsersDTO): UsersEntity;
-  entityToDTO(entity: UsersEntity): UsersDTO;
+  // entityToDTO(entity: UsersEntity): UsersDTO;
 };
 
 export const usersDTOAdapter: UsersDTOAdapter = {
@@ -14,11 +14,9 @@ export const usersDTOAdapter: UsersDTOAdapter = {
       ...otherFields,
     };
   },
-  entityToDTO(entity) {
-    const id = Date.now();
-    return {
-      ...entity,
-      id,
-    };
-  },
+  // entityToDTO(entity) {
+  //   return {
+  //     ...entity,
+  //   };
+  // },
 };

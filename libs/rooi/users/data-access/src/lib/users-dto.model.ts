@@ -1,7 +1,7 @@
 import {DeepReadonly} from "@core/utils";
 
 export type UsersDTO = DeepReadonly<{
-  id: string | number;
+  id: number;
   login: string;
   password: string;
   email: string;

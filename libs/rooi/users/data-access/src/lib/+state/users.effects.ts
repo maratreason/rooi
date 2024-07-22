@@ -1,6 +1,6 @@
 import {inject} from "@angular/core";
 import {createEffect, Actions, ofType} from "@ngrx/effects";
-import {switchMap, catchError, of, map} from "rxjs";
+import {switchMap, catchError, of, map, mergeMap} from "rxjs";
 import * as UsersActions from "./users.actions";
 import * as UsersFeature from "./users.reducer";
 import {ApiService} from "@core/http";
@@ -20,7 +20,8 @@ export const usersEffects = createEffect(
         apiService.get<UsersDTO[]>("/users").pipe(
           map((users) =>
             UsersActions.loadUsersSuccess({
-              users: users.map((user) => usersDTOAdapter.DTOtoEntity(user)),
+              // users: users.map((user: UsersDTO) => usersDTOAdapter.DTOtoEntity(user)),
+              users
             })
           ),
           catchError((error) => {

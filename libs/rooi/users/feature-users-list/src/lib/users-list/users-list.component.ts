@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {ChangeDetectionStrategy, Component, inject, OnInit} from "@angular/core";
 import {CommonModule} from "@angular/common";
+import {UsersFacade} from "@rooi/data-access";
 
 @Component({
   selector: "users-list",
@@ -9,4 +10,12 @@ import {CommonModule} from "@angular/common";
   styleUrl: "./users-list.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UsersListComponent {}
+export class UsersListComponent implements OnInit {
+  private readonly usersFacade = inject(UsersFacade);
+  public readonly $users = this.usersFacade.allUsers$;
+
+  ngOnInit(): void {
+    this.usersFacade.init();
+    console.log(this.$users.subscribe(users => console.log(users)))
+  }
+}
