@@ -20,7 +20,8 @@
       "@rooi/data-access": ["libs/rooi/users/data-access/src/index.ts"],
       "@rooi/feature-users-list": [
         "libs/rooi/users/feature-users-list/src/index.ts"
-      ]
+      ],
+      "@rooi/ui-kit": ["libs/core/ui-kit/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
