@@ -18,6 +18,7 @@
       "@core/http": ["libs/core/http/src/index.ts"],
       "@core/utils": ["libs/core/utils/src/index.ts"],
       "@rooi/core": ["libs/rooi/core/src/index.ts"],
+      "@rooi/core/ui": ["libs/rooi/core/ui/layout/src/index.ts"],
       "@rooi/data-access": ["libs/rooi/users/data-access/src/index.ts"],
       "@rooi/feature-users-list": [
         "libs/rooi/users/feature-users-list/src/index.ts"
