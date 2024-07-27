@@ -1,10 +1,9 @@
 import {Component} from "@angular/core";
 import {RouterModule} from "@angular/router";
-import {UsersListComponent} from "@rooi/feature-users-list"
 
 @Component({
   standalone: true,
-  imports: [RouterModule, UsersListComponent],
+  imports: [RouterModule],
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",

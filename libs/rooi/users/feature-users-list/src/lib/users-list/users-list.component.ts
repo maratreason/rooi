@@ -1,11 +1,12 @@
 import {ChangeDetectionStrategy, Component, inject, OnInit} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {UsersFacade} from "@rooi/data-access";
+import {ButtonComponent} from "@rooi/ui-kit";
 
 @Component({
   selector: "users-list",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonComponent],
   templateUrl: "./users-list.component.html",
   styleUrl: "./users-list.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
