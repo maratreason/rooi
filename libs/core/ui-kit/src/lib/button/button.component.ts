@@ -9,4 +9,5 @@ import {CommonModule} from "@angular/common";
   styleUrl: "./button.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ButtonComponent {}
+export class ButtonComponent {
+}

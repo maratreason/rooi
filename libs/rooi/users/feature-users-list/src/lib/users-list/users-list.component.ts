@@ -19,4 +19,8 @@ export class UsersListComponent implements OnInit {
     this.usersFacade.init();
     console.log(this.$users.subscribe(users => console.log(users)))
   }
+
+  save() {
+    console.log("SAVE BUTTON CLICKED")
+  }
 }

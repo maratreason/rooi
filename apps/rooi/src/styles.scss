@@ -3,3 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+// UI KIT STYLES
+.btn {
+  height: 32px;
+  width: auto;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  background: #e6e6e6;
+  font-size: 14px;
+
+  &.btn-primary {
+    color: #fff;
+    background: #019467;
+
+    &:hover {
+      background: #00825b;
+    }
+  }
+
+  &.btn-rounded {
+    height: 29px;
+    border-radius: 20px;
+  }
+}

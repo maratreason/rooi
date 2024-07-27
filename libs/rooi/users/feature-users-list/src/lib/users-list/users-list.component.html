@@ -2,5 +2,8 @@
   <ng-container *ngIf="$users | async as users">
     {{users | json}}
   </ng-container>
-  <r-button>hello</r-button>
+  <button class="btn">Кнопка</button>
+  <button class="btn btn-primary">Кнопка</button>
+  <button class="btn btn-primary btn-rounded" (click)="save()">Сохранить</button>
+  <button class="btn btn-warning btn-rounded">Кнопка</button>
 </div>
