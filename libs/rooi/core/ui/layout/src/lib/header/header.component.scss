@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  height: 4.7rem;
+  margin-left: 22.4rem;
+  padding-right: 6rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+.header__items-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header__items-item {
+  display: flex;
+  align-items: center;
+}
+.header__items-item span {
+  margin-left: 2rem;
+}

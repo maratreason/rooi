@@ -15,6 +15,11 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "build": {
+      "options": {
+        "assets": ["apps/rooi/public/images"]
+      }
     }
   }
 }

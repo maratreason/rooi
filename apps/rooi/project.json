@@ -24,6 +24,10 @@
           {
             "glob": "**/*",
             "input": "apps/rooi/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/rooi/src/assets"
           }
         ],
         "styles": [
